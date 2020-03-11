@@ -1,13 +1,14 @@
 import React from 'react';
-//import logo from './logo.svg';
+import ClockQueue from "./ClockQueue/ClockQueue.js";
+
 import './App.css';
-import Clock from 'react-live-clock';
+
 
 //var nextRadioTime = "1 am";
 //var nextDucklingTime = "2 am";
 //var nextBridgeTime = "3 am";
 var currentTime = Date();
-
+const FILE_NAME = 'ClockQueue';
 const eventTime = new Date('January 23, 2020 16:05:00')
 
 //eventTime.setMinutes(12);
@@ -28,20 +29,29 @@ if (currentHour === nextRadioHour){
   //console.log("Yo, it's time!");
 }
 */
+
+
+// function CreateFolderPath(){
+
+//   if (!fs.existsSync(path, (err) => {if (err) throw err;}))
+//       fs.mkdirSync(path);
+// }
+
 function App() {
+
   return (        
     <div className="App">
       <header className="App-time">
-          <Clock           
-          format={'h:mm:ss'} 
-          ticking={true} 
-          timezone={'US/Central'}          
-          />  
+
+
+          <ClockQueue/>  
          
          </header>  
+
+
         <header className="App-ampm">
           
-        <Clock format={'a'}       
+        <ClockQueue format={'a'}       
         /> 
              
         </header>
